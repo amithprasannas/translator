@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-TranslateDocFromEnfToFr_C#",
+      "appliesTo": "TranslateDocFromEnfToFr_C#.cs",
+      "type": "launch"
+    }
+  ]
+}

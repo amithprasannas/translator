@@ -11,19 +11,19 @@ namespace DocumentTranslator
     class Program
     {
         static readonly string route = "/batches";
-        static readonly string endpoint = "<TRANSLATER_SERVICE_ENDPOINT>/translator/text/batch/v1.0";
-        static readonly string key = "<TRANSLATER_SERVICE_KEY>";
+        static readonly string endpoint = "https://demodoctranslaterinstance.cognitiveservices.azure.com//translator/text/batch/v1.0";
+        static readonly string key = "75a9c35b083d465ba7489cc26f34bacf";
 
         static readonly string json = ("" +
             "{\"inputs\": " +
                 "[{\"source\": " +
-                    "{\"sourceUrl\": \"<SOURCE_SAS_TOKEN>\"," +
+                    "{\"sourceUrl\": \"https://demodoctranslate.blob.core.windows.net/inputdocs?sp=r&st=2023-05-21T15:30:53Z&se=2023-05-21T23:30:53Z&spr=https&sv=2022-11-02&sr=c&sig=AOu29paomCSfNlPENMRiPW1b25RqnH5wqF5kEpx7gag%3D\"," +
                       "\"storageSource\": \"AzureBlob\"" +
                 "}," +
             "\"targets\": " +
-                "[{\"targetUrl\": \"<TARGET_SAS_TOKEN>\"," +
+                "[{\"targetUrl\": \"https://demodoctranslate.blob.core.windows.net/outputdocs?sp=rcwl&st=2023-05-21T15:34:01Z&se=2023-05-21T23:34:01Z&spr=https&sv=2022-11-02&sr=c&sig=IL66cqm8hDN1WezvQTq9IIR8o7AxEMltdsOEiOf2WXk%3D\"," +
                    "\"storageSource\": \"AzureBlob\"," +
-                    "\"language\": \"fr\"}]}]}");
+                    "\"language\": \"en\"}]}]}");
 
 
         static async Task Main(string[] args)
